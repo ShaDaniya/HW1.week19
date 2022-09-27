@@ -9,3 +9,7 @@
 .container {
     padding: 50px;
 }
+
+.checkboxText {
+    color: red;
+}

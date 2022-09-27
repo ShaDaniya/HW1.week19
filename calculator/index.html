@@ -14,116 +14,119 @@
 <body>
     <h1 class="text-center calculator__title">Calculator</h1>
     <!-- Сумма -->
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-6 container__item">
-                <div class="mb-3">
-                    <h2 class="text-center mt-3">Сложение ( + )</h2>
-                    <label for="addendOne" class="form-label">Котик, введи первое слагаемое</label>
-                    <input id="addendOne" type="number">
-                </div>
-                <div class="mb-3">
-                    <label for="addendTwo" class="form-label">А теперь введи второе слагаемое</label>
-                    <input id="addendTwo" type="number">
-                    <div class="form-text">Вводи только цифры, не текст, пока я сама не научусь запрещать вводить
-                        текст
-                        =)
-                    </div>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="checkSum" required>
-                    <label class="form-check-label" for="checkSum">Подтверди, пожалуйста, что ввел только цифры,
-                        котик</label>
-                </div>
-                <p>
-                    <button class="btn btn-secondary btn-lg text-uppercase" id="btnSum">Сложить</button>
-                </p>
-                <div id="resultSum"></div>
-                <div id="resultCheck"></div>
-                <!-- Сумма -->
-            </div>
-            <div class="col-6 container__item">
-                <!-- Разность -->
-                <div class="mb-3">
-                    <h2 class="text-center mt-3">Вычитание ( - )</h2>
-                    <label for="numOne" class="form-label">Котик, из чего ты хочешь вычесть?</label>
-                    <input id="numOne" type="number">
-                </div>
-                <div class="mb-3">
-                    <label for="numTwo" class="form-label">А что ты хочешь вычесть?</label>
-                    <input id="numTwo" type="number">
-                    <div class="form-text">И тут тоже, пожалуйста, только циферки ну и дальше тоже, это я уже писать
-                        не
-                        буду
-                        ;)
-                    </div>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="checkMinus">
-                    <label class="form-check-label" for="checkMinus">Подтверди, пожалуйста, что ввел только цифры,
-                        котик</label>
-                </div>
-                <p>
-                    <button onclick="calcSubtraction()" class="btn btn-success btn-lg text-uppercase">Вычесть</button>
-                </p>
-                <div id="resultMinus"></div>
-                <!-- Разность -->
-            </div>
-            <div class="col-6 container__item">
-                <div class="mb-3">
-                    <!-- Умножение -->
+    <form onsubmit="return false">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-6 container__item">
                     <div class="mb-3">
-                        <h2 class="text-center mt-3">Умножение ( * )</h2>
-                        <label for="factorOne" class="form-label">Что мы будем умножать?</label>
-                        <input id="factorOne" type="number">
+                        <h2 class="text-center mt-3">Сложение ( + )</h2>
+                        <label for="addendOne" class="form-label">Котик, введи первое слагаемое</label>
+                        <input id="addendOne" type="number">
                     </div>
                     <div class="mb-3">
-                        <label for="factorTwo" class="form-label">И на что?</label>
-                        <input id="factorTwo" type="number">
-                        <div class="form-text">Вижу только цифрыыыы)))
+                        <label for="addendTwo" class="form-label">А теперь введи второе слагаемое</label>
+                        <input id="addendTwo" type="number">
+                        <div class="form-text">Вводи только цифры, не текст, пока я сама не научусь запрещать вводить
+                            текст
+                            =)
                         </div>
                     </div>
+                    <div id="resultCheckSum" class="checkboxText"></div>
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="checkMiltiplcation">
-                        <label class="form-check-label" for="ccheckMiltiplcation">Не забудь про галочку тут
-                            тоже</label>
+                        <input type="checkbox" class="form-check-input" id="checkSum" required>
+                        <label class="form-check-label" for="checkSum">Подтверди, пожалуйста, что ввел только цифры,
+                            котик</label>
                     </div>
                     <p>
-                        <button onclick="calcMultiplication()"
-                            class="btn btn-info btn-lg text-uppercase">Умножить</button>
+                        <button class="btn btn-secondary btn-lg text-uppercase" id="btnSum">Сложить</button>
                     </p>
-                    <div id="resultMultiplication"></div>
-                    <!-- Умножение -->
+                    <div id="resultSum"></div>
+                    <!-- Сумма -->
                 </div>
-            </div>
-            <div class="col-6 container__item">
-                <div class="mb-3">
-                    <!-- Деление -->
+                <div class="col-6 container__item">
+                    <!-- Разность -->
                     <div class="mb-3">
-                        <h2 class="text-center mt-3">Деление ( / )</h2>
-                        <label for="dividend" class="form-label">Что делим?</label>
-                        <input id="dividend" type="number">
+                        <h2 class="text-center mt-3">Вычитание ( - )</h2>
+                        <label for="numOne" class="form-label">Котик, из чего ты хочешь вычесть?</label>
+                        <input id="numOne" type="number">
                     </div>
                     <div class="mb-3">
-                        <label for="divider" class="form-label">И на сколько кисок?</label>
-                        <input id="divider" type="number">
-                        <div class="form-text">Ну ты понял =)
+                        <label for="numTwo" class="form-label">А что ты хочешь вычесть?</label>
+                        <input id="numTwo" type="number">
+                        <div class="form-text">И тут тоже, пожалуйста, только циферки ну и дальше тоже, это я уже писать
+                            не
+                            буду
+                            ;)
                         </div>
                     </div>
+                    <div id="resultCheckSubtraction" class="checkboxText"></div>
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="checkDivision">
-                        <label class="form-check-label" for="checkDivision">и тут тоже</label>
+                        <input type="checkbox" class="form-check-input" id="checkMinus" required>
+                        <label class="form-check-label" for="checkMinus">Подтверди, пожалуйста, что ввел только цифры,
+                            котик</label>
                     </div>
                     <p>
-                        <button onclick="calcDivision()"
-                            class="btn btn-warning btn-lg text-uppercase">Разделить</button>
+                        <button id="calcSubtraction" class="btn btn-success btn-lg text-uppercase">Вычесть</button>
                     </p>
-                    <div id="resultDivision"></div>
-                    <!-- Деление -->
+                    <div id="resultMinus"></div>
+                    <!-- Разность -->
+                </div>
+                <div class="col-6 container__item">
+                    <div class="mb-3">
+                        <!-- Умножение -->
+                        <div class="mb-3">
+                            <h2 class="text-center mt-3">Умножение ( * )</h2>
+                            <label for="factorOne" class="form-label">Что мы будем умножать?</label>
+                            <input id="factorOne" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="factorTwo" class="form-label">И на что?</label>
+                            <input id="factorTwo" type="number">
+                            <div class="form-text">Вижу только цифрыыыы)))
+                            </div>
+                        </div>
+                        <div id="resultCheckMiltiplcation" class="checkboxText"></div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="checkMiltiplcation" required>
+                            <label class="form-check-label" for="ccheckMiltiplcation">Не забудь про галочку тут
+                                тоже</label>
+                        </div>
+                        <p>
+                            <button id="calcMultiplication" class="btn btn-info btn-lg text-uppercase">Умножить</button>
+                        </p>
+                        <div id="resultMultiplication"></div>
+                        <!-- Умножение -->
+                    </div>
+                </div>
+                <div class="col-6 container__item">
+                    <div class="mb-3">
+                        <!-- Деление -->
+                        <div class="mb-3">
+                            <h2 class="text-center mt-3">Деление ( / )</h2>
+                            <label for="dividend" class="form-label">Что делим?</label>
+                            <input id="dividend" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="divider" class="form-label">И на сколько кисок?</label>
+                            <input id="divider" type="number">
+                            <div class="form-text">Ну ты понял =)
+                            </div>
+                        </div>
+                        <div id="resultCheckDivision" class="checkboxText"></div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="checkDivision" required>
+                            <label class="form-check-label" for="checkDivision">и тут тоже</label>
+                        </div>
+                        <p>
+                            <button id="calcDivision" class="btn btn-warning btn-lg text-uppercase">Разделить</button>
+                        </p>
+                        <div id="resultDivision"></div>
+                        <!-- Деление -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
